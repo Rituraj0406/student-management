@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-full">
+        <!-- Navbar -->
+        <nav class="bg-white border-gray-200 dark:bg-gray-900">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kendriya Vidyalaya</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li>
+                            <a href="./index.html"
+                                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                aria-current="page" data-page="home">Home</a>
+                        </li>
+                        <li>
+                            <a href="./students/student.html"
+                                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" data-page="student">Students</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" data-page="faculties">Faculties</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" data-page="aboutus">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="nav-link block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" data-page="contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content p-6">
+            <!-- Card for info -->
+            <div class="grid grid-cols-4 gap-4">
+                <div class="card shadow-md p-3 rounded-lg">
+                    <div>
+                        <p class="text-base text-slate-500 font-semibold">Students</p>
+                        <span class="text-2xl">20+</span>
+                    </div>
+                </div>
+                <div class="card shadow-md p-3 rounded-lg">
+                    <div>
+                        <p class="text-base text-slate-500 font-semibold">Faculties</p>
+                        <span class="text-2xl">20+</span>
+                    </div>
+                </div>
+                <div class="card shadow-md p-3 rounded-lg">
+                    <div>
+                        <p class="text-base text-slate-500 font-semibold">Sports Team</p>
+                        <span class="text-2xl">20+</span>
+                    </div>
+                </div>
+                <div class="card shadow-md p-3 rounded-lg">
+                    <div>
+                        <p class="text-base text-slate-500 font-semibold">Classrooms</p>
+                        <span class="text-2xl">20+</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Top scorer table -->
+            <div class="top-scorers mt-20 grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-2xl text-slate-500 mb-4">Top Scorer</p>
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 bg-gray-50">
+                                        Student Names
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Class
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 bg-gray-50">
+                                        Score
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Percentage
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="student-topscore">
+                                <!-- <tr class="border-b border-gray-200">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                                        Aman Kumar
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Sixth
+                                    </td>
+                                    <td class="px-6 py-4 bg-gray-50">
+                                        430
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        89%
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                                        Fatima Aehmad
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Nineth
+                                    </td>
+                                    <td class="px-6 py-4 bg-gray-50">
+                                        500
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        90%
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                                        Ritu Raj
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Eleventh
+                                    </td>
+                                    <td class="px-6 py-4 bg-gray-50">
+                                        600
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        100%
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50">
+                                        Rajan Narayan Singh
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        Eleventh
+                                    </td>
+                                    <td class="px-6 py-4 bg-gray-50">
+                                        600
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        100%
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- List of classes with Top scores -->
+                <div>
+                    <p class="text-2xl text-slate-500 mb-4">Top Scorer Classes</p>
+                    <ul class="divide-y divide-gray-200 shadow-md p-4 rounded-lg">
+                        <li class="pb-3 sm:pb-4">
+                            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm font-medium text-gray-900 truncate ">
+                                        Neil Sims
+                                    </p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
+                                    $320
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-3 sm:py-4">
+                            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm font-medium text-gray-900 truncate ">
+                                        Bonnie Green
+                                    </p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
+                                    $3467
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-3 sm:py-4">
+                            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm font-medium text-gray-900 truncate ">
+                                        Michael Gough
+                                    </p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
+                                    $67
+                                </div>
+                            </div>
+                        </li>
+                        <li class="py-3 sm:py-4">
+                            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm font-medium text-gray-900 truncate ">
+                                        Thomas Lean
+                                    </p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
+                                    $2367
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-3 pb-0 sm:pt-4">
+                            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm font-medium text-gray-900 truncate ">
+                                        Lana Byrd
+                                    </p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
+                                    $367
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
