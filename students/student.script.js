@@ -52,9 +52,9 @@ function addStudentRecordToTable(){
 }
 
 function deleteRow(index){
-    users.splice(index, 1);
-    localStorage.setItem('users', JSON.stringify(users));
-    addStudentRecordToTable();
+    users.splice(index, 1); //removing the element from the users array 
+    localStorage.setItem('users', JSON.stringify(users)); // storing the updated array in the local storage
+    addStudentRecordToTable(); // calling the table add function to update the data in the student table.
 }
 
 window.onload = function() {
