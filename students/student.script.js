@@ -38,9 +38,10 @@ function addStudentRecordToTable(){
                     <button class="bg-red-500 px-5 py-2 text-white" onclick="deleteRow(${index})">Delete</button>
                 </td>
             `;
-            list.appendChild(row);
+            list.appendChild(row); // here in the list we are adding the tds 
         });
     } else {
+        // just to show if there is no data found on the local storage.
         const row = document.createElement('tr');
         row.innerHTML = `
             <p class="text-center pt-10">No data found.</p>
