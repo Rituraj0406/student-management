@@ -35,6 +35,7 @@ function addStudentRecordToTable(){
                     ${user.contact}
                 </td>
                 <td class="px-6 py-4">
+                    <button class="bg-blue-500 px-5 py-2 text-white" onclick="editRow(${index})">Edit</button>
                     <button class="bg-red-500 px-5 py-2 text-white" onclick="deleteRow(${index})">Delete</button>
                 </td>
             `;
@@ -50,6 +51,10 @@ function addStudentRecordToTable(){
 
     }
     
+}
+// need to work on edit functionality
+function editRow(index){
+    console.log('on edit click getting index:==',index);
 }
 
 function deleteRow(index){
