@@ -29,6 +29,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+//getting the index from the url params and change the page title to Edit Students to Database
+document.addEventListener('DOMContentLoaded', function(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const studentIndex = urlParams.get('data')
+    console.log('print selected index:', studentIndex);
+
+    const heading = document.querySelector('.main-content p.text-2xl');
+
+    if(studentIndex){
+        heading.textContent = 'Edit Student Database';
+    }
+
+    const students = JSON.parse(localStorage.getItem('users')) || [];
+    const selectedStudent = students[studentIndex];
+    console.log('*****', selectedStudent);
+
+    if(selectedStudent) {
+        populateForm(selectedStudent)
+    } else {
+        console.log('Student not found in localstorage.')
+    }
+
+
+    function populateForm(data) {
+        document.getElementById('name').value = data.name;
+        document.getElementById('classs').value = data.classs;
+        document.getElementById('score').value = data.score;
+        document.getElementById('email').value = data.email;
+        document.getElementById('contact').value = data.contact;
+    }
+})
+
+
 function reset(formId){
     const form  = document.getElementById(formId);
     form.reset();
