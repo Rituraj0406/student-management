@@ -56,7 +56,7 @@ function addStudentRecordToTable(){
 function editRow(index){
     console.log('on edit click getting index:==',index);
     const selectedIndex = index;
-    window.location.href = `addStudents.html?data=${encodeURIComponent(selectedIndex)}`
+    window.location.href = `editStudent.html?data=${encodeURIComponent(selectedIndex)}`
 }
 
 function deleteRow(index){
